@@ -1,0 +1,142 @@
+.footer-section {
+  background: url('../../assets/team1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #f8fafc;
+  padding: 80px 20px 40px;
+  position: relative;
+}
+
+.footer-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+.footer-overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  padding-bottom: 50px;
+}
+
+.footer-column {
+  flex: 1 1 250px;
+  min-width: 220px;
+}
+
+.footer-title {
+  color: #ac835d;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.footer-subtext {
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  margin: 4px 0;
+}
+
+.footer-heading {
+  color:#ac835d;
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.footer-column p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #e2e8f0;
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+.footer-column span {
+  display: inline-block;
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #f8fafc;
+  font-size: 1.4rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+  color: #ac835d;
+}
+
+/* Bottom Footer Bar */
+.footer-bottom {
+  border-top: 1px solid #334155;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-copy {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+.footer-copy a {
+  color: #ac835d;
+  margin-left: 5px;
+  text-decoration: none;
+}
+
+.footer-copy a:hover {
+  text-decoration: underline;
+}
+
+.footer-arrow {
+  font-size: 1.6rem;
+  color: #ac835d;
+  transition: transform 0.3s ease;
+}
+
+.footer-arrow:hover {
+  transform: translateY(-5px);
+  color: #ac835d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+/* New class to style the copyright */
+.green-text {
+  color:#ac835d; /* Emerald Green */
+}
+
+
+
+
+

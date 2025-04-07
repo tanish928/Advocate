@@ -1,0 +1,106 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Padding to avoid content hidden behind navbar */
+body {
+  padding-top: 90px;
+}
+
+/* Section spacing fix */
+section {
+  scroll-margin-top: 100px; /* adjust this to match your navbar height */
+}
+
+/* Transparent navbar with blur and transition */
+.transparent-navbar {
+  background-color: rgba(20, 16, 12, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.transparent-navbar.scrolled {
+  background-color: rgba(20, 16, 12, 0.95);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Brand */
+.advocate-brand {
+  color: #ac835d !important;
+}
+
+.advocate-icon {
+  color: #fff;
+  background-color: #ac835d;
+  padding: 6px 10px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  margin-right: 8px;
+}
+
+/* Toggler Icon */
+.custom-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23ac835d' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Nav Links */
+.navbar-nav .nav-link {
+  color: #f8f9fa !important;
+  padding: 8px 16px;
+  font-weight: 500;
+}
+
+/* Hover underline effect */
+.nav-hover {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-hover::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background-color: #ac835d;
+  transition: width 0.3s ease;
+}
+
+.nav-hover:hover::after {
+  width: 100%;
+}
+
+.nav-hover:hover,
+.nav-link.active {
+  color: #ac835d !important;
+}
+
+/* Button */
+.btn-outline-advocate {
+  --bs-btn-color: #ac835d;
+  --bs-btn-border-color: #ac835d;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #ac835d;
+  --bs-btn-hover-border-color: #ac835d;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #945f3f;
+  --bs-btn-active-border-color: #945f3f;
+}
+
+/* Responsive Tweak */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: rgba(20, 16, 12, 0.95);
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+}
+.navbar-nav .nav-link {
+  color: #ac835d !important;
+  padding: 8px 16px;
+  font-weight: 500;
+}

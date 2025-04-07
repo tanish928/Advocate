@@ -1,0 +1,51 @@
+.call-bg-section {
+    background: url('../../assets/team1.jpg') no-repeat center center/cover;
+    padding: 100px 20px;
+    position: relative;
+    text-align: center;
+    color: white;
+
+  }
+  
+  .call-bg-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+    z-index: 1;
+  }
+  
+  .call-overlay {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .call-title {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .call-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: #e2e8f0;
+  }
+  
+  .call-btn {
+    background-color: #facc15;
+    color: #1e293b;
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+  }
+  
+  .call-btn:hover {
+    background-color: #eab308;
+  }
+  

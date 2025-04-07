@@ -1,0 +1,126 @@
+.book-section {
+  background: #14100c;
+  padding: 5rem 1rem;
+  color: white; /* All text white by default */
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.section-subtitle {
+  color: #e2e8f0;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.consult-btn {
+  font-size: 1.1rem;
+  background-color: #ac835d;
+  color: white;
+  border: none;
+}
+
+.consult-btn:hover {
+  background-color: #8a6b4c;
+  color: white;
+}
+
+.benefits-section h4 {
+  color: white;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: auto;
+}
+
+.benefits-list li {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Modal */
+.consultancy-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.consultancy-modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-buttons a {
+  font-size: 1.1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  transition: transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.modal-btn.whatsapp {
+  background-color: #25d366;
+  color: white;
+  border: none;
+}
+
+.modal-btn.call {
+  background-color: #ac835d;
+  color: white;
+  border: none;
+}
+
+.modal-btn.email {
+  background-color: #1e293b;
+  color: white;
+  border: none;
+}
+
+.modal-buttons a:hover {
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .benefits-list li {
+    font-size: 0.95rem;
+  }
+}

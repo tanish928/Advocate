@@ -1,0 +1,32 @@
+.achievements-section {
+  background: #14100c;
+  font-family: 'Poppins', sans-serif;
+}
+
+.achievement-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(4px);
+  border-radius: 1rem;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.achievement-icon {
+  color: #ac835d;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+/* Responsive enhancements */
+@media (max-width: 768px) {
+  .achievement-card {
+    padding: 2rem 1rem;
+  }
+}

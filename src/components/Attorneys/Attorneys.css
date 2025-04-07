@@ -1,0 +1,40 @@
+.attorneys-section {
+  background-color: #ffffff;
+}
+
+.attorney-card {
+  border: 2px solid #ac835d; /* 👈 Added brand border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border-radius: 12px;
+}
+
+.attorney-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-color: #946b45; /* 👈 Slightly darker on hover */
+}
+
+.attorney-image {
+  height: 300px;
+  overflow: hidden;
+}
+
+.attorney-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.attorney-info {
+  background-color: #fff;
+}
+.attorney-social a {
+  color: #ac835d !important;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.attorney-social a:hover {
+  color: #946b45 !important; /* Slightly darker on hover */
+  transform: scale(1.1);
+}
+
