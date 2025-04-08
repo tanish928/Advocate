@@ -48,7 +48,7 @@ export const About = () => {
           <div className="col-lg-6">
             <h2 className="fw-bold mb-3 text-dark">Who I Am</h2>
             <p className="text-muted mb-3 fs-5">
-              Hello, I'm <span className="text-advocate fw-semibold">Adv. Tanish Thkur</span> — a passionate legal professional
+              Hello, I'm <span className="text-advocate fw-semibold">Adv. Swati</span> — a passionate legal professional
               with a commitment to providing clear, honest, and strong legal support to my clients.
             </p>
             <p className="text-muted mb-3">

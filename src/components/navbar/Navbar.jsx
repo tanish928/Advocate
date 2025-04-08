@@ -23,7 +23,7 @@ export const Navbar = () => {
     >
       <div className="container">
         <a className="navbar-brand fw-bold fs-4 advocate-brand" href="#home">
-          <span className="advocate-icon">🏛</span> Advocate
+          <span className="advocate-icon">🏛</span> Adv. Swati
         </a>
         <button
           className="navbar-toggler border-0"

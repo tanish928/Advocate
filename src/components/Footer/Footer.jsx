@@ -45,7 +45,7 @@ const Footer = () => {
 
           {/* Left Column - Info */}
           <div className="footer-column">
-            <h2 className="footer-title">Advocate Tanish Thkur</h2>
+            <h2 className="footer-title">Advocate Swati</h2>
             <p className="footer-subtext">High Court Lawyer</p>
             <p className="footer-subtext">Criminal, Civil & Property Law</p>
           </div>
@@ -54,7 +54,7 @@ const Footer = () => {
           <div className="footer-column">
             <h3 className="footer-heading">Contact</h3>
             <p><FaPhoneAlt /> <span>+91 12345 67890</span></p>
-            <p><FaEnvelope /> <span>advocate.tanish@example.com</span></p>
+            <p><FaEnvelope /> <span>advocate.swati@example.com</span></p>
             <p><FaMapMarkerAlt /> <span>Delhi, India</span></p>
           </div>
 

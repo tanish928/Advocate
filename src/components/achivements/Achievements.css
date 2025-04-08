@@ -24,6 +24,11 @@
   color: #fff !important;
 }
 
+/* Change the color of the titles (h3) */
+.achievement-card h3 {
+  color: #ac835d; /* Set title color here */
+}
+
 /* Responsive enhancements */
 @media (max-width: 768px) {
   .achievement-card {

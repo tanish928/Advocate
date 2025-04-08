@@ -11,21 +11,23 @@ export const Attorneys = () => {
   const isInView = useInView(ref, { once: true });
   const controls = useAnimation();
 
+  // Controls animation trigger when in view
   useEffect(() => {
     if (isInView) {
       controls.start('visible');
     }
   }, [isInView, controls]);
 
+  // Container animation (For whole section)
   const containerVariants = {
-    hidden: {},
+    hidden: { opacity: 0 },
     visible: {
-      transition: {
-        staggerChildren: 0.3,
-      },
+      opacity: 1,
+      transition: { duration: 1, staggerChildren: 0.3 }, // Stagger children animation
     },
   };
 
+  // Card animation (For each individual card)
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -35,41 +37,55 @@ export const Attorneys = () => {
     },
   };
 
+  // Name animation (For each individual name)
+  const nameVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: 'easeOut' },
+    },
+  };
+
+  // Data for attorneys
   const attorneys = [
     {
       id: 1,
-      name: "Samuel Johnson",
-      title: "Senior Attorney",
-      bio: "Samuel has over 20 years of experience in corporate and civil litigation, ensuring justice is served.",
+      name: 'Samuel Johnson',
+      title: 'Senior Attorney',
+      bio:
+        'Samuel has over 20 years of experience in corporate and civil litigation, ensuring justice is served.',
       image: attorney1,
       social: {
-        linkedin: "#",
-        twitter: "#",
-        facebook: "#",
+        linkedin: '#',
+        twitter: '#',
+        facebook: '#',
       },
     },
     {
       id: 2,
-      name: "Olivia Brown",
-      title: "Associate Attorney",
-      bio: "Olivia specializes in criminal defense with a track record of successfully protecting her clients' rights.",
+      name: 'Olivia Brown',
+      title: 'Associate Attorney',
+      bio:
+        "Olivia specializes in criminal defense with a track record of successfully protecting her clients' rights.",
       image: attorney2,
       social: {
-        linkedin: "#",
-        twitter: "#",
-        facebook: "#",
+        linkedin: '#',
+        twitter: '#',
+        facebook: '#',
       },
     },
     {
       id: 3,
-      name: "Michael Davis",
-      title: "Attorney",
-      bio: "Michael brings extensive expertise in family law and dispute resolution, providing compassionate support.",
+      name: 'Michael Davis',
+      title: 'Attorney',
+      bio:
+        'Michael brings extensive expertise in family law and dispute resolution, providing compassionate support.',
       image: attorney3,
       social: {
-        linkedin: "#",
-        twitter: "#",
-        facebook: "#",
+        linkedin: '#',
+        twitter: '#',
+        facebook: '#',
       },
     },
   ];
@@ -85,11 +101,25 @@ export const Attorneys = () => {
     >
       <div className="container">
         <div className="text-center mb-5">
-          <h2 className="fw-bold">Our Attorneys</h2>
-          <p className="text-muted">Meet the experts who will fight for your rights</p>
+          <motion.h2
+            className="fw-bold"
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            Our Attorneys
+          </motion.h2>
+          <motion.p
+            className="text-muted"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+          >
+            Meet the experts who will fight for your rights
+          </motion.p>
         </div>
         <div className="row">
-          {attorneys.map(attorney => (
+          {attorneys.map((attorney) => (
             <motion.div
               key={attorney.id}
               className="col-md-4 mb-4"
@@ -100,7 +130,12 @@ export const Attorneys = () => {
                   <img src={attorney.image} alt={attorney.name} className="img-fluid" />
                 </div>
                 <div className="attorney-info p-4">
-                  <h4 className="fw-bold">{attorney.name}</h4>
+                  <motion.h4
+                    className="fw-bold"
+                    variants={nameVariants} // Apply nameVariants animation
+                  >
+                    {attorney.name}
+                  </motion.h4>
                   <p className="text-muted mb-2">{attorney.title}</p>
                   <p className="small text-muted">{attorney.bio}</p>
                   <div className="attorney-social mt-3">
